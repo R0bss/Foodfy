@@ -1,0 +1,62 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock %}
+
+{% block content %}
+        <section class="mais_acessados">
+            {% for item in items %}
+                <div class="card" id="{{item.title}}">
+                    <div class="card_image-container">
+                        <img src="/burger.png" alt="{{item.title}}">
+                    </div>
+                    <div class="card_content">
+                        <p>{{item.title}}</p>
+                    </div>
+                    <div class="card_info">
+                        <p>por {{item.author}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            {% for item in items %}
+                <div class="card" id="{{item.title}}">
+                    <div class="card_image-container">
+                        <img src="/burger.png" alt="{{item.title}}">
+                    </div>
+                    <div class="card_content">
+                        <p>{{item.title}}</p>
+                    </div>
+                    <div class="card_info">
+                        <p>por {{item.author}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="image_container_modal">
+                        <img src="" alt="">
+                    </div>
+                    <div class="title_modal">
+                        <p></p>
+                    </div>
+                    <div class="info_modal">
+                        <p></p>
+                    </div>
+                </div>
+                <a class="close-modal">Fechar modal</a>
+                
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <p>Todos direitos reservados, receitas Foodfy</p>
+        </div>
+
+        <script src="scripts.js"></script>
+
+{% endblock %}

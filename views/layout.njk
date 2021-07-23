@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/style.css">
+
+        {% block head %}
+          <title>Foodfy</title>
+        {% endblock %}
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img src="/logo.png" alt="">
+                </a>
+            </div>
+            <div class="links">
+                <a href="/sobre">Sobre</a>
+                <a href="/receitas">Receitas</a>
+            </div>
+        </header>
+
+        {% block content %} {% endblock %}
+
+    </body>
+
+
+</html>
+
