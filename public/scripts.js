@@ -3,6 +3,8 @@ const modal = document.querySelector('.modal');
 
 const cards = document.querySelectorAll('.card');
 
+const accordion = document.querySelector('.title');
+const accordionContent = document.querySelector('.content_accordion')
 
 for(let card of cards){
     card.addEventListener("click", function(){
@@ -21,4 +23,18 @@ document.querySelector(".close-modal").addEventListener("click", function(){
         modalOverlay.querySelector(".title_modal p").textContent = ""
         modalOverlay.querySelector(".info_modal p").textContent = ""
 
+})
+
+document.querySelector(".accordion").addEventListener("click", function(){
+    //modalOverlay.classList.remove("active");
+    accordion.querySelector("a").textContent = "CERTO"
+
+    /* Toggle between hiding and showing the active panel */
+    /*
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    } */
 })

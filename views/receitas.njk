@@ -6,32 +6,22 @@
 
 {% block content %}
         <section class="mais_acessados">
-            {% for item in items %}
-                <div class="card" id="{{item.title}}">
-                    <div class="card_image-container">
-                        <img src="/burger.png" alt="{{item.title}}">
+            {% for i in range(0, 2)  -%}
+                {% for item in items %}
+                    <div class="card" id="{{item.title}}">
+                        <div class="card_image-container">
+                            <!-- <img src="/burger.png" alt="{{item.title}}"> -->
+                            <img src="{{item.image}}" alt="{{item.title}}">
+                        </div>
+                        <div class="card_content">
+                            <p>{{item.title}}</p>
+                        </div>
+                        <div class="card_info">
+                            <p>por {{item.author}}</p>
+                        </div>
                     </div>
-                    <div class="card_content">
-                        <p>{{item.title}}</p>
-                    </div>
-                    <div class="card_info">
-                        <p>por {{item.author}}</p>
-                    </div>
-                </div>
-            {% endfor %}
-            {% for item in items %}
-                <div class="card" id="{{item.title}}">
-                    <div class="card_image-container">
-                        <img src="/burger.png" alt="{{item.title}}">
-                    </div>
-                    <div class="card_content">
-                        <p>{{item.title}}</p>
-                    </div>
-                    <div class="card_info">
-                        <p>por {{item.author}}</p>
-                    </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            {%-  endfor %}
         </section>
 
         <div class="modal-overlay">
@@ -51,12 +41,9 @@
                 
             </div>
         </div>
-
-
-        <div class="footer">
-            <p>Todos direitos reservados, receitas Foodfy</p>
-        </div>
-
-        <script src="scripts.js"></script>
-
+        
+<script src="scripts.js"></script>
 {% endblock %}
+
+
+
