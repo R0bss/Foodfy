@@ -5,41 +5,59 @@
 {% endblock %}
 
 {% block content %}
-        <section class="recipes">
-          <div class="card" id="{{item.title}}">
-            <div class="card_image-container">
-                  <!-- <img src="/burger.png" alt="{{item.title}}"> -->
-              <img src="{{item.image}}" alt="{{item.title}}">
-            </div>
-            <div class="card_content">
-              <p>{{item.title}}</p>
-            </div>
-            <div class="card_info">
-              <p>por {{item.author}}</p>
-            </div>
-            <div class="card_ingredients">
-              <div class="title">
-                  <h2>Ingredientes</h2>
-                  <a class="accordion">Section 1</a>
-              </div>
-              <div class="content_accordion">
-                {% for item in item.ingredients %}
-                  <li>{{item}};</li>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="card_preparation">
-              <h2>Modo de preparo</h2>
-              {% for item in item.preparation %}
-                <li>{{item}}</li>
-              {% endfor %}
-            </div>
-            <div class="card_information">
-              <h2>Informações adicionais</h2>
-              <p>{{item.information | striptags(true) | escape | nl2br}}</p>
-            </div>
-          </div>
-        </section>
+  
+  <section class="recipes">
 
-<script src="scripts.js"></script>
+    <div class="card" id="{{item.title}}">
+      <div class="card_image-container">
+            <!-- <img src="/burger.png" alt="{{item.title}}"> -->
+        <img src="{{item.image}}" alt="{{item.title}}">
+      </div>
+      <div class="card_content">
+        <p>{{item.title}}</p>
+      </div>
+      <div class="card_info">
+        <p>por {{item.author}}</p>
+      </div>
+      <div class="card_ingredients">
+        <div class="accordions">
+          <div class="title">
+              <h2>Ingredientes</h2>
+              <a class="accordion">esconder</a>
+          </div>
+          <div class="content_accordion">
+            {% for item in item.ingredients %}
+              <li>{{item}};</li>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="card_preparation">
+        <div class="accordions">
+          <div class="title">
+            <h2>Modo de preparo</h2>  
+            <a class="accordion">esconder</a>
+          </div>
+          <div class="content_accordion">
+            {% for item in item.preparation %}
+              <li>{{item}}</li>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="card_information">
+        <div class="accordions">
+          <div class="title">
+            <h2>Informações adicionais</h2>
+            <a class="accordion">esconder</a>
+          </div>
+          <div class="content_accordion">
+            <p>{{item.information | striptags(true) | escape | nl2br}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/scripts.js"></script>
 {% endblock %}
