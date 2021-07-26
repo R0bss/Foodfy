@@ -7,19 +7,18 @@
 {% block content %}
   
   <section class="recipes">
-
-    <div class="card" id="{{item.title}}">
-      <div class="card_image-container">
+    <div class="recipe" id="{{loop.index0}}">
+      <div class="image-container">
             <!-- <img src="/burger.png" alt="{{item.title}}"> -->
         <img src="{{item.image}}" alt="{{item.title}}">
       </div>
-      <div class="card_content">
+      <div class="content">
         <p>{{item.title}}</p>
       </div>
-      <div class="card_info">
+      <div class="info">
         <p>por {{item.author}}</p>
       </div>
-      <div class="card_ingredients">
+      <div class="ingredients">
         <div class="accordions">
           <div class="title">
               <h2>Ingredientes</h2>
@@ -32,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div class="card_preparation">
+      <div class="preparation">
         <div class="accordions">
           <div class="title">
             <h2>Modo de preparo</h2>  
@@ -45,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="card_information">
+      <div class="information">
         <div class="accordions">
           <div class="title">
             <h2>Informações adicionais</h2>
@@ -58,6 +57,4 @@
       </div>
     </div>
   </section>
-
-  <script src="/scripts.js"></script>
 {% endblock %}

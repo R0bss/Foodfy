@@ -21,7 +21,7 @@
 
         <section class="mais_acessados">
             {% for item in items %}
-                <div class="card" id="{{item.title}}">
+                <div class="card" id="{{loop.index0}}">
                     <div class="card_image-container">
                         <img src="{{item.image}}" alt="{{item.title}}">
                     </div>
