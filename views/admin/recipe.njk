@@ -1,0 +1,67 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block head %}
+    <title>{{item.title}}</title>
+{% endblock %}
+
+{% block content %}
+  
+  <section class="admin_recipes">
+    <div class="admin_recipe" id="{{loop.index0}}">
+      <div class="admin_recipe_title">
+        <p>Receita: {{item.title}}</p>
+        <a href="/">Editar Receita</a>
+      </div>
+
+      <div class="admin_image-container">
+            <!-- <img src="/burger.png" alt="{{item.title}}"> -->
+        <img src="{{item.image}}" alt="{{item.title}}">
+      </div>
+      <div class="admin_content">
+        <p>{{item.title}}</p>
+      </div>
+      <div class="admin_info">
+        <p>por {{item.author}}</p>
+      </div>
+      <div class="admin_ingredients">
+        <div class="accordions">
+          <div class="admin_title">
+              <h2>Ingredientes</h2>
+              <!--<a class="accordion">esconder</a>-->
+          </div>
+          <div class="admin_content_accordion">
+            {% for item in item.ingredients %}
+              <li>{{item}};</li>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="admin_preparation">
+        <div class="accordions">
+          <div class="admin_title">
+            <h2>Modo de preparo</h2>  
+            <!--<a class="accordion">esconder</a>-->
+          </div>
+          <div class="admin_content_accordion">
+            {% for item in item.preparation %}
+              <li>{{item}}</li>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="admin_information">
+        <div class="accordions">
+          <div class="admin_title">
+            <h2>Informações adicionais</h2>
+            <!--<a class="accordion">esconder</a>-->
+          </div>
+          <!--
+          <div class="content_accordion">
+            <p>{{item.information | striptags(true) | escape | nl2br}}</p>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

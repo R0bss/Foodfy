@@ -345,3 +345,187 @@ iframe {
     display: none;
 }
 
+/* =========== LAYOUT ADMIN ================*/
+
+body{
+    background: white;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;/* fazer o flex ficar 
+    em coluna e não em linha */
+}
+
+.admin_header{
+    width: 100%;
+    padding: 27px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    background-color: black;
+}
+
+.admin_logo a img {
+    width: 90.6px;
+    height: 26.9px;
+    background: white;
+    filter: invert(100%);
+    margin-left: 500px; /* Rever esta margem aplicada para uma responsiva*/
+}
+
+
+/* ===================== ADMIN INDEX ===================== */
+.admin_title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 940px;;
+    height: 28px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.admin_title h2{
+    color: #111111;
+    font-size: 24px;
+}
+
+.admin_recipes{
+    max-width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ===================== ADMIN CARD ===================== */
+.admin_card {
+    /* Grid dividido ao meio*/
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+}
+
+.admin_card_image-container img{
+    /* width: 100%; */
+    height: 80px;
+    width: 172px;
+    border-radius: 8.57px;
+}
+.admin_card_content p{
+    /*padding-top: 20px;*/
+    font-size: 18px;
+    color: #111111;
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.admin_card_info p{
+    /* padding-top: 5px; */
+    color: #777777;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+.admin_card_info a{
+    /* padding-top: 5px; */
+    color: #6558C3;
+    font-size: 14px;
+    height: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+/* ===================== ADMIN RECIPE ===================== */
+
+
+
+.admin_recipes{ /*Pensar em mudar esta parte*/
+    max-width: 940px;
+    margin: 0 auto;
+    gap: 20px;
+}
+.admin_recipes .admin_recipe_title {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.admin_recipes .admin_recipe_title p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.admin_recipes .admin_recipe_title a{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #6558C3;
+    color: white;
+    padding: 9px 20px;
+    border-radius: 4px;
+}
+
+.admin_recipes .admin_image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.admin_recipes .admin_content p{
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+    text-align: center;
+}
+.admin_recipes .admin_info p{
+    padding-top: 4px;
+    color: #777777;
+    text-align: center;
+    font-size: 20px;
+}
+.admin_recipes .admin_ingredients .admin_title{
+    display: grid;
+    grid-template-columns: 0.245fr 1.245fr;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.admin_recipes .admin_preparation .admin_title{
+    display: grid;
+    grid-template-columns: 0.55fr 2fr;
+    padding-top: 39px;
+    padding-bottom: 20px;
+}
+
+.admin_recipes .admin_information .admin_title{
+    display: grid;
+    grid-template-columns: 0.80fr 2fr;
+    padding-top: 39px;
+    padding-bottom: 20px;
+}
+
+.admin_recipes .admin_title a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #999999;
+    padding-top: 10px;
+}
+
+.admin_recipes li, p{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    text-align: justify;
+}
+/*
+.recipes .content_accordion.hide{
+    display: none;
+}*/

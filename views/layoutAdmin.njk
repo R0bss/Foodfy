@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <head>
+    {% block head %}
+      <title>Admin Manager</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="/style.css">
+
+  </head>
+
+  <body>
+    <header class="admin_header">
+      <div class="admin_logo">
+        <a href="/">
+          <img src="/logo.png" alt="">
+        </a>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+    
+  </body>
+</html>

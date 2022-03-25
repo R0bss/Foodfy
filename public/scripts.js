@@ -53,3 +53,26 @@ document.querySelector(".close-modal").addEventListener("click", function(){
 
 })
 */
+
+
+/* =================== ADMIN ==================== */
+const cardsAdmin = document.querySelectorAll('.card');
+
+//const accordions = document.querySelectorAll('.recipes .accordions');
+
+//const current = location.pathname;
+//const links = document.querySelectorAll('.links a');
+
+for(let cardAdmin of cardsAdmin){
+  cardAdmin.addEventListener("click", function(){
+      const postIdAdmin = cardAdmin.getAttribute("id")
+      //const postId = card.IndexOf(card.getAttribute("id"))
+      //console.log(card.IndexOf(card.getAttribute("id")))
+      //modalOverlay.classList.add('active')
+      //modalOverlay.querySelector(".image_container_modal img").src = `/assets/${postId}.png`
+      //modalOverlay.querySelector(".image_container_modal img").src = card.querySelector(".card_image-container img").src
+      //modalOverlay.querySelector(".title_modal p").textContent = card.querySelector(".card_content p").textContent
+      //modalOverlay.querySelector(".info_modal p").textContent = card.querySelector(".card_info p").textContent
+      //window.location.href = `/admin/recipes/${postIdAdmin}`
+  })
+}
