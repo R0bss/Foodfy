@@ -369,12 +369,20 @@ body{
     background-color: black;
 }
 
+.admin_logo{
+    display: flex;
+    width: 940px;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
 .admin_logo a img {
     width: 90.6px;
     height: 26.9px;
     background: white;
     filter: invert(100%);
-    margin-left: 500px; /* Rever esta margem aplicada para uma responsiva*/
+    //margin-left: 500px; /* Rever esta margem aplicada para uma responsiva*/
 }
 
 
@@ -382,7 +390,7 @@ body{
 .admin_title {
     margin-top: 50px;
     margin-bottom: 20px;
-    width: 940px;;
+    width: 940px;
     height: 28px;
     position: relative;
     left: 50%;
@@ -398,7 +406,7 @@ body{
     max-width: 940px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    //grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
@@ -443,7 +451,6 @@ body{
 /* ===================== ADMIN RECIPE ===================== */
 
 
-
 .admin_recipes{ /*Pensar em mudar esta parte*/
     max-width: 940px;
     margin: 0 auto;
@@ -454,11 +461,14 @@ body{
     margin-top: 50px;
     margin-bottom: 20px;
     align-items: center;
+    justify-content: space-between;
 }
 .admin_recipes .admin_recipe_title p{
     font-size: 24px;
     font-weight: bold;
     color: #111111;
+    /*margin-left: 50%;
+    transform: translateX(-50%);*/
 }
 
 .admin_recipes .admin_recipe_title a{
@@ -469,6 +479,8 @@ body{
     color: white;
     padding: 9px 20px;
     border-radius: 4px;
+    margin-left: 0px;
+    text-align: right;
 }
 
 .admin_recipes .admin_image-container img{
@@ -491,24 +503,27 @@ body{
     font-size: 20px;
 }
 .admin_recipes .admin_ingredients .admin_title{
-    display: grid;
-    grid-template-columns: 0.245fr 1.245fr;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    /*display: grid;
+    grid-template-columns: 0.245fr 1.245fr;*/
+    margin-top: 31px;
+    margin-bottom: 19px;
+    padding: 0;
 }
 
 .admin_recipes .admin_preparation .admin_title{
-    display: grid;
-    grid-template-columns: 0.55fr 2fr;
-    padding-top: 39px;
-    padding-bottom: 20px;
+    /*display: grid;
+    grid-template-columns: 0.55fr 2fr;*/
+    margin-top: 41px;
+    margin-bottom: 19px;
+    padding: 0;
 }
 
 .admin_recipes .admin_information .admin_title{
-    display: grid;
-    grid-template-columns: 0.80fr 2fr;
-    padding-top: 39px;
-    padding-bottom: 20px;
+    /*display: grid;
+    grid-template-columns: 0.80fr 2fr;*/
+    margin-top: 41px;
+    margin-bottom: 19px;
+    padding: 0;
 }
 
 .admin_recipes .admin_title a {
@@ -524,8 +539,25 @@ body{
     color: #444444;
     line-height: 28px;
     text-align: justify;
+    list-style-type: none;
 }
+/*
+.admin_recipes li:before{
+    content: "-";
+    display: inline;
+    float: left;
+    margin-left: -18px;
+    font-weight:700;
+    color: black;
+    font-size:20px;
+    margin-top:3.5px
+}
+*/
 /*
 .recipes .content_accordion.hide{
     display: none;
 }*/
+
+.admin_content_accordion p {
+    margin-bottom: 51px;
+}

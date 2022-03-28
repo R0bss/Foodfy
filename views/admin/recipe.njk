@@ -31,7 +31,7 @@
           </div>
           <div class="admin_content_accordion">
             {% for item in item.ingredients %}
-              <li>{{item}};</li>
+              <li>- {{item}};</li>
             {% endfor %}
           </div>
         </div>
@@ -44,7 +44,7 @@
           </div>
           <div class="admin_content_accordion">
             {% for item in item.preparation %}
-              <li>{{item}}</li>
+              <li>- {{item}}</li>
             {% endfor %}
           </div>
         </div>
@@ -55,11 +55,11 @@
             <h2>Informações adicionais</h2>
             <!--<a class="accordion">esconder</a>-->
           </div>
-          <!--
-          <div class="content_accordion">
+          
+          <div class="admin_content_accordion">
             <p>{{item.information | striptags(true) | escape | nl2br}}</p>
           </div>
-          -->
+          
         </div>
       </div>
     </div>
