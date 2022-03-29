@@ -364,16 +364,18 @@ body{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    display: grid;
-    grid-template-columns: 1fr 10fr;
+    display: initial;
+    grid-template-columns: 0;
     background-color: black;
 }
 
 .admin_logo{
     display: flex;
     width: 940px;
-    align-items: center;
-    justify-content: flex-end;
+    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 
 }
 
@@ -382,7 +384,7 @@ body{
     height: 26.9px;
     background: white;
     filter: invert(100%);
-    //margin-left: 500px; /* Rever esta margem aplicada para uma responsiva*/
+    /*margin-left: 500px;*/ /* Rever esta margem aplicada para uma responsiva*/
 }
 
 
@@ -406,7 +408,7 @@ body{
     max-width: 940px;
     margin: 0 auto;
     display: grid;
-    //grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
@@ -452,7 +454,7 @@ body{
 
 
 .admin_recipes{ /*Pensar em mudar esta parte*/
-    max-width: 940px;
+    width: 940px;
     margin: 0 auto;
     gap: 20px;
 }
