@@ -1,6 +1,6 @@
     <div class="item">
       <div>Imagem da receita</div>
-      <div>
+      <div class="item_image">
           <input 
             type="url" 
             name="avatar_url"
@@ -12,30 +12,32 @@
     <div class="item">
       <div>Ingredientes</div>
       {% for ingredient in recipe.ingredients %}
-        <div>
+        <div class="item_ingredient">
           <input 
             type="text" 
-            name="name"
+            name="ingredients[]"
             value="{{ingredient}}"
           >
         </div>
       {% endfor %}
     </div>
+    <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
     <div class="item">
       <div>Modo de preparo</div>
       {% for preparation in recipe.preparation %}
-        <div>
+        <div class="item_preparation">
           <input 
             type="text" 
-            name="name"
+            name="preparation[]"
             value="{{preparation}}"
           >
         </div>
       {% endfor %}
     </div>
+    <button type="button" class="add-preparation">Adicionar novo passo</button>
     <div class="item">
       <div>Informações adicionais</div>
-        <div>
+        <div class="item_information">
           <input 
             type="text" 
             name="name"
@@ -43,4 +45,5 @@
           >
         </div>
     </div>
-    <button type="submit">Salvar</button>
+    
+    

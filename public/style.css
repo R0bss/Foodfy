@@ -347,7 +347,7 @@ iframe {
 
 /* =========== LAYOUT ADMIN ================*/
 
-body{
+header{
     background: white;
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -359,14 +359,14 @@ body{
 }
 
 .admin_header{
-    width: 100%;
+    width: auto;
     padding: 27px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     display: initial;
     grid-template-columns: 0;
-    background-color: black;
+    background-color: #111111;
 }
 
 .admin_logo{
@@ -383,7 +383,7 @@ body{
     width: 90.6px;
     height: 26.9px;
     background: white;
-    filter: invert(100%);
+    filter: invert(93%);
     /*margin-left: 500px;*/ /* Rever esta margem aplicada para uma responsiva*/
 }
 
@@ -534,6 +534,7 @@ body{
     font-size: 12px;
     color: #999999;
     padding-top: 10px;
+    
 }
 
 .admin_recipes li, p{
@@ -567,19 +568,21 @@ body{
 
 .card_recipe {
     background-color: white;
-    width: 800px;
+    width: 940px;
     /*height: 400px;*/
-    min-height: 400px;
+    /*min-height: 400px;*/
 
     /* Espaçamento ao centro*/
-    margin: 45px auto;
+    margin: 55px auto;
 
     /* Grid dividido ao meio*/
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
+    */
+    
 
     /* Sombra */
-    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
+    /*box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);*/
 
     /* Animation */
     animation: up 200ms ease-out;
@@ -595,10 +598,7 @@ body{
     }
 }
 /* ========  Details   =========== */
-.details{
-    padding: 32px;
-}
-
+/*
 .details .item{
     border-bottom: 1px solid rgba(0,0,0,0.1);
     padding:16px 0;
@@ -608,6 +608,39 @@ body{
 .details .item:last-child{
     border: none;
 }
+*/
+
+.details .item {
+    font-size: 16px;
+    line-height: 24px;
+    color: #111111 ;
+    letter-spacing:0.7px;
+    font-weight: bold;
+
+    padding: 30px 0;
+}
+
+.details .item div:nth-child(1){
+    line-height: 24px;
+    letter-spacing:0.7px;
+}
+.details .item .item_image, .item_ingredient, .item_preparation{
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 15px 0px 15px 20px;
+    border: 1px solid #DDDDDD;
+}
+.details .item .item_information{
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 18px 0px 0px 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 257px;
+}
+
+
+/*
+
 .details h3,
 .details .item div:nth-child(1){
     font-size: 14px;
@@ -621,11 +654,11 @@ body{
     font-weight: bold;
     font-size: 18px;
 }
-
+*/
 .details h3{
-    text-transform: uppercase;
+    font-size: 24px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #111111;
 }
 
 .details .item span{
@@ -646,9 +679,7 @@ body{
 input, select {
     width: 100%;
     outline: none;
-    color: #555;
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 input[type="radio"]{
@@ -661,24 +692,48 @@ input::placeholder{
     font-weight: normal;
 }
 
-button[type="submit"],
-a.button{
-    padding: 8px 32px;
-    background-color: lightcoral;
-    color: white;
-    border-radius: 4px;
-    margin-top: 32px;
-    width: 100%;
-    font-size: 16px;
+.title-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
 }
+
+.forms-actions {
+    position: relative;
+    margin-top: 30px;
+}
+
+button[type="submit"]
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+    width: 139px;
+    padding: 9px 20px;
+    background-color:  #6558C3;
+    color: #FFFFFF;
+    border-radius: 4px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
 a.button {
     display: block;
     box-sizing: border-box;
-    text-align: center;
+    /*text-align: center;*/
     text-decoration: none;
 }
 
 #form-delete button[type="submit"] {
-    margin-top: 8px;
-    background-color: lightcoral;
+    background-color: #DC4747;
+    width: 92px;
+    right: 150px;
+    
 }
+
