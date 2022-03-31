@@ -4,7 +4,13 @@
   <div class="card_recipe">
     <section class="details">
       	<form action="POST" action="/">
-        
+        <h3>Editar</h3>
+        {% include "admin/fields.njk" %}
+        <input type="hidden" name="" value="{{recipe.id}}"/>
+        </form>
+        <form id="form-delete" action="/members?_method=DELETE" method="post">
+          <input type="hidden" name="id" value="{{ recipe.id }}">
+          <button type="submit">Deletar</button>
         </form>
     </section>
   </div>
