@@ -9,7 +9,7 @@
           >
       </div>
     </div>
-    <div class="item">
+    <div id="ingredients" class="item">
       <div>Ingredientes</div>
       {% for ingredient in recipe.ingredients %}
         <div class="item_ingredient">
@@ -22,7 +22,7 @@
       {% endfor %}
     </div>
     <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
-    <div class="item">
+    <div id="preparations" class="item">
       <div>Modo de preparo</div>
       {% for preparation in recipe.preparation %}
         <div class="item_preparation">
