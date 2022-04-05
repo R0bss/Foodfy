@@ -367,6 +367,7 @@ header{
     display: initial;
     grid-template-columns: 0;
     background-color: #111111;
+    height: auto;
 }
 
 .admin_logo{

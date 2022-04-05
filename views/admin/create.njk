@@ -4,9 +4,9 @@
   <div class="card_recipe">
     <section class="details">
       <div class="forms-actions">
-        <form method="POST" action="/admin/recipes?_method=PUT">
+        <form method="post" action="/admin/recipes">
           <div class="title-content">
-            <h3>Editando Receita</h3>
+            <h3>Criando Receita</h3>
             <button type="submit" class="save">Salvar receita</button>
           </div>
   
@@ -14,13 +14,8 @@
         
           <input type="hidden" name="id" value="{{id}}"/>
         </form>
-        
-        <form id="form-delete" action="/admin/recipes?_method=DELETE" method="post">
-          <input type="hidden" name="id" value="{{id}}">
-          <button class="delete" type="submit">Deletar</button>
-        </form>
       </div> 
     </section>	
   </div>
-<script src="/scripts.js"></script>
-{% endblock %}
+  <script src="/scripts.js"></script>
+{% endblock content %}
