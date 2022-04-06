@@ -111,14 +111,18 @@ exports.admin_post = function(req, res){
       if (req.body[key] == "") {
         return res.send('Please, fill all fields!') 
       }
-    }
+    } 
   }
 
   //recipe.pop('id')
-  console.log(newArray)
-//  data.recipes.push({
-//  })
+  data.recipes.push({
+    ...req.body,
+  })
+  fs.writeFile("data.json", JSON.stringify(data,  null, 2), function(err){
+    if (err) return res.send("Write file error!") 
 
+    return res.redirect("/admin/recipes")
+  })
 }
 
 exports.admin_create = function(req, res){
